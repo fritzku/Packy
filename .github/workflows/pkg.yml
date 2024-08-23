@@ -1,0 +1,21 @@
+name: Workflow Name
+on: [workflow_dispatch]
+
+jobs:
+  # This is used to identify the output in other jobs
+  Unique_Name_For_This_Job:
+    name: Job Name
+    runs-on: ubuntu-latest
+    steps:
+      # This is a YAML list, so note where the hyphens (-) are
+        # The pretty name of this step
+      - name: Checkout Code
+        # The name of the public collection of actions to perform
+        uses: actions/checkout@v3
+        # Any variables to pass into this action module
+        with:
+          path: "REPO"
+
+      # This action will run a shell command
+      - name: Run a command
+        run: echo "Hello World"
