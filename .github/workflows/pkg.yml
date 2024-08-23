@@ -18,4 +18,8 @@ jobs:
 
       # This action will run a shell command
       - name: Run a command
-        run: echo "Hello World"
+        run: |
+          echo "Hello World"
+          ls
+          ls /home/runner/work/Packy/Packy/REPO
+        
